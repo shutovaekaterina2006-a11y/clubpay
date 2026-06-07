@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 import json, os
 from datetime import datetime
 
-app = Flask(__name__)
-DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+app = Flask(__name__, template_folder='.')
+DATA_DIR = os.path.dirname(__file__)
 
 def load_json(path):
     if os.path.exists(path):
