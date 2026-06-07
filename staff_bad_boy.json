@@ -1,30 +1,90 @@
 {
+  "Г001": {
+    "name": "Сушкова Симона",
+    "role": "Г",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х008": {
+    "name": "Таболина Лиза",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ001": {
+    "name": "Краева Настя",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
   "Т003": {
     "name": "Маевич Лика",
     "role": "Т",
     "guarantee": 0,
     "active": true
   },
+  "Т201": {
+    "name": "Першакова Вивьен",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Г002": {
+    "name": "Корнеева Стар",
+    "role": "Г",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ003": {
+    "name": "Олина Сара",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "Г003": {
+    "name": "Беспалова Фокси",
+    "role": "Г",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ004": {
+    "name": "Померанцева Юля",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т044": {
+    "name": "Трышкина Кристалл",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ007": {
+    "name": "Прохорова Кристина",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т075": {
+    "name": "Авезметова Бэлла",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ010": {
+    "name": "Авезметова Ира",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ011": {
+    "name": "Скумс Яна",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
   "Т087": {
     "name": "Горбунева Кармен",
-    "role": "Т",
-    "guarantee": 0,
-    "active": true
-  },
-  "Т111": {
-    "name": "Кондакова Ариэль",
-    "role": "Т",
-    "guarantee": 0,
-    "active": true
-  },
-  "Т164": {
-    "name": "Константинова Сидни",
-    "role": "Т",
-    "guarantee": 0,
-    "active": true
-  },
-  "Т182": {
-    "name": "Куприянович Холли",
     "role": "Т",
     "guarantee": 0,
     "active": true
@@ -35,75 +95,15 @@
     "guarantee": 0,
     "active": true
   },
-  "Т211": {
-    "name": "Шестопалова Рейчел",
+  "КАС005": {
+    "name": "Бобров Сергей",
+    "role": "КАС",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т111": {
+    "name": "Кондакова Ариэль",
     "role": "Т",
-    "guarantee": 0,
-    "active": true
-  },
-  "Т218": {
-    "name": "Кужугет Бьянка",
-    "role": "Т",
-    "guarantee": 0,
-    "active": true
-  },
-  "Т245": {
-    "name": "Лабеко Каролина",
-    "role": "Т",
-    "guarantee": 0,
-    "active": true
-  },
-  "КМ004": {
-    "name": "Померанцева Юля",
-    "role": "КМ",
-    "guarantee": 0,
-    "active": true
-  },
-  "КМ007": {
-    "name": "Прохорова Кристина",
-    "role": "КМ",
-    "guarantee": 0,
-    "active": true
-  },
-  "КМ009": {
-    "name": "Вайтер Жанна",
-    "role": "КМ",
-    "guarantee": 0,
-    "active": true
-  },
-  "Х008": {
-    "name": "Таболина Лиза",
-    "role": "Х",
-    "guarantee": 0,
-    "active": true
-  },
-  "О006": {
-    "name": "Фролова Дарья",
-    "role": "О",
-    "guarantee": 0,
-    "active": true
-  },
-  "О018": {
-    "name": "Пимонова Лилия",
-    "role": "О",
-    "guarantee": 0,
-    "active": true
-  },
-  "Г003": {
-    "name": "Беспалова Фокси",
-    "role": "Г",
-    "guarantee": 0,
-    "active": true
-  },
-  "Д010": {
-    "name": "Зайцев Леша",
-    "role": "Д",
-    "guarantee": 0,
-    "active": true
-  },
-  "К004": {
-    "name": "Адамян Григорий",
-    "role": "К",
     "guarantee": 0,
     "active": true
   },
@@ -113,9 +113,297 @@
     "guarantee": 0,
     "active": true
   },
+  "Т119": {
+    "name": "Даниярбекова Китана",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т211": {
+    "name": "Шестопалова Рейчел",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Б018": {
+    "name": "Олина Сара",
+    "role": "Б",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т120": {
+    "name": "Магдеева Илона",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Б019": {
+    "name": "Померанцева Юля",
+    "role": "Б",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т126": {
+    "name": "Макаренко Эмили",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Б020": {
+    "name": "Прохорова Кристина",
+    "role": "Б",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т215": {
+    "name": "Дзугурова Несса",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "АДМ001": {
+    "name": "Сидорова Ксения",
+    "role": "АДМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т218": {
+    "name": "Кужугет Бьянка",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
   "АДМ002": {
     "name": "Гречишкина Светлана",
     "role": "АДМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "АДМ003": {
+    "name": "Плесунов Никита",
+    "role": "АДМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "О006": {
+    "name": "Фролова Дарья",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т221": {
+    "name": "Карлова Ким",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "УБ018": {
+    "name": "Гуля",
+    "role": "УБ",
+    "guarantee": 0,
+    "active": true
+  },
+  "УБ019": {
+    "name": "Зуля",
+    "role": "УБ",
+    "guarantee": 0,
+    "active": true
+  },
+  "О013": {
+    "name": "Скумс Яна",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "УБ020": {
+    "name": "Элина",
+    "role": "УБ",
+    "guarantee": 0,
+    "active": true
+  },
+  "УБ021": {
+    "name": "Эмилия",
+    "role": "УБ",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т231": {
+    "name": "Косырькова Стаси",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "О018": {
+    "name": "Пимонова Лилия",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т235": {
+    "name": "Маврина Джейн",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "О024": {
+    "name": "Бориева Дисана",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т240": {
+    "name": "Дудкина Алиса",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "О027": {
+    "name": "Олина Сара",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "О028": {
+    "name": "Померанцева Юля",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т159": {
+    "name": "Крохмаль Ханна",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "О029": {
+    "name": "Прохорова Кристина",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т245": {
+    "name": "Лабеко Каролина",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т246": {
+    "name": "Дужий Бани",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "О033": {
+    "name": "Краева Настя",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т164": {
+    "name": "Константинова Сидни",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т249": {
+    "name": "Котова Амелия",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т250": {
+    "name": "Кучерова Земфира",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т167": {
+    "name": "Кислицина Юста",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "К004": {
+    "name": "Адамян Григорий",
+    "role": "К",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х073": {
+    "name": "Карауш Каролина",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "К022": {
+    "name": "Нуров Даврон",
+    "role": "К",
+    "guarantee": 0,
+    "active": true
+  },
+  "К023": {
+    "name": "Арутюнян Эльдар",
+    "role": "К",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т182": {
+    "name": "Куприянович Холли",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х076": {
+    "name": "Олина Сара",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х077": {
+    "name": "Прохорова Кристина",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х079": {
+    "name": "Померанцева Юля",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х080": {
+    "name": "Краева Настя",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х081": {
+    "name": "Коширина Маша",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "Д009": {
+    "name": "Колесников Егор",
+    "role": "Д",
+    "guarantee": 0,
+    "active": true
+  },
+  "Д010": {
+    "name": "Зайцев Леша",
+    "role": "Д",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х083": {
+    "name": "Медяник Екатерина",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х084": {
+    "name": "Евина Дарья",
+    "role": "Х",
     "guarantee": 0,
     "active": true
   }
