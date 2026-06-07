@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>{{club.name}} — Смена {{shift.date}}</h1>
+  <div style="display:flex;gap:8px;">
+    <a href="/clubs/{{club_id}}/shift/{{shift_key}}/upload" class="btn">Загрузить iiko</a>
+    <a href="/clubs/{{club_id}}/shift/{{shift_key}}/export" class="btn btn-primary">Скачать Excel</a>
+  </div>
+</div>
+{% if shift.has_hostess %}
+<div style="font-size:12px;color:#666;margin-bottom:12px;">✅ Хостес есть — гарант КМ сгорает от 10 000₽</div>
+{% else %}
+<div style="font-size:12px;color:#f59e0b;margin-bottom:12px;">⚠️ Хостес нет — гарант КМ сгорает от 20 000₽</div>
+{% endif %}
+
+{% for role in role_order %}
+{% set role_staff = [] %}
+{% for num, emp in shift.staff.items() %}{% if emp.role == role %}{% set _ = role_staff.append((num, emp)) %}{% endif %}{% endfor %}
+{% if role_staff %}
+<div class="card" style="overflow-x:auto;">
+  <h2>{{role_names[role]}} ({{role_staff|length}})</h2>
+  <table style="min-width:900px;">
+    <tr>
+      <th>Номер</th><th>Имя</th><th>Ставка</th><th>Крейзи</th><th>Консум</th>
+      <th>Чай зал</th><th>Чай VIP</th><th>НетМонет</th><th>Штраф</th>
+      <th>Итого</th><th>Долг БН</th><th>Долг НАЛ</th><th>К выплате</th>
+    </tr>
+    {% for num, emp in role_staff %}
+    <tr id="row_{{num}}">
+      <td><strong>{{num}}</strong></td>
+      <td>{{emp.name}}</td>
+      {% for field in ["stavka","crazy","konsum","chai_zal","chai_vip","netmonet","shtraf"] %}
+      <td>
+        <input type="number" value="{{emp.get(field,0)|int}}" min="0"
+               style="width:80px;padding:4px 6px;text-align:right;"
+               onchange="updateCell('{{club_id}}','{{shift_key}}','{{num}}','{{field}}',this.value)">
+      </td>
+      {% endfor %}
+      <td id="itogo_{{num}}" style="font-weight:600;">{{emp.get("itogo",0)|int}}</td>
+      <td>
+        <input type="number" value="{{emp.get('dolg_bn',0)|int}}" min="0"
+               style="width:80px;padding:4px 6px;text-align:right;"
+               onchange="updateCell('{{club_id}}','{{shift_key}}','{{num}}','dolg_bn',this.value)">
+      </td>
+      <td>
+        <input type="number" value="{{emp.get('dolg_nal',0)|int}}" min="0"
+               style="width:80px;padding:4px 6px;text-align:right;"
+               onchange="updateCell('{{club_id}}','{{shift_key}}','{{num}}','dolg_nal',this.value)">
+      </td>
+      <td id="kvplate_{{num}}" style="font-weight:600;color:#166534;">{{emp.get("k_vplate",0)|int}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endif %}
+{% endfor %}
+
+<script>
+function updateCell(club_id, shift_key, number, field, value) {
+  fetch(`/api/shift/${club_id}/${shift_key}/update_cell`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({number, field, value: parseFloat(value)||0})
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.ok) {
+      document.getElementById(`itogo_${number}`).textContent = Math.round(data.itogo).toLocaleString();
+      document.getElementById(`kvplate_${number}`).textContent = Math.round(data.k_vplate).toLocaleString();
+    }
+  });
+}
+</script>
+{% endblock %}
