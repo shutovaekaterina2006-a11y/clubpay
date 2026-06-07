@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>{{club.name}} — Новая смена</h1>
+  <a href="/" class="btn">Назад</a>
+</div>
+<form method="POST" action="/clubs/{{club_id}}/shift/start">
+<div class="card">
+  <h2>Параметры смены</h2>
+  <div class="form-row">
+    <div><label>Дата</label><input type="date" name="date" value="{{today}}" required></div>
+    <div style="display:flex;align-items:center;gap:8px;padding-top:20px;">
+      <input type="checkbox" name="has_hostess" id="has_hostess" checked style="width:auto;">
+      <label for="has_hostess" style="margin:0;">Есть хостес (влияет на гарант КМ)</label>
+    </div>
+  </div>
+</div>
+{% for role in role_order %}
+{% if role in by_role %}
+<div class="card">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+    <h2 style="margin:0;">{{role_names[role]}}</h2>
+    {% if role == "КМ" %}
+    <span style="font-size:12px;color:#888;">Отметь кто в общак (2% крейзи, 100₽/стол)</span>
+    {% elif role in ["Б", "О"] %}
+    <span style="font-size:12px;color:#888;">Отметь кто в общак (% бара)</span>
+    {% endif %}
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
+  {% for emp in by_role[role] %}
+  <div style="border:1px solid #e5e5e5;border-radius:8px;padding:10px;display:flex;align-items:center;gap:10px;">
+    <input type="checkbox" name="selected_staff" value="{{emp.number}}" id="emp_{{emp.number}}" checked style="width:auto;margin:0;">
+    <label for="emp_{{emp.number}}" style="margin:0;flex:1;cursor:pointer;">
+      <div style="font-weight:500;font-size:13px;">{{emp.number}}</div>
+      <div style="font-size:12px;color:#666;">{{emp.name}}</div>
+    </label>
+    {% if role == "КМ" %}
+    <div style="display:flex;align-items:center;gap:4px;">
+      <input type="checkbox" name="artel_km" value="{{emp.number}}" checked style="width:auto;margin:0;">
+      <span style="font-size:11px;color:#888;">общак</span>
+    </div>
+    {% elif role in ["Б", "О"] %}
+    <div style="display:flex;align-items:center;gap:4px;">
+      <input type="checkbox" name="artel_bo" value="{{emp.number}}" checked style="width:auto;margin:0;">
+      <span style="font-size:11px;color:#888;">общак</span>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+<button type="submit" class="btn btn-primary" style="margin-top:8px;">Начать смену →</button>
+</form>
+{% endblock %}
