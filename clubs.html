@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header"><h1>Клубы</h1></div>
+<div class="card">
+  <h2>Добавить клуб</h2>
+  <form method="POST" action="/clubs/add">
+  <div class="form-row">
+    <div><label>ID (латиница, без пробелов)</label><input name="club_id" placeholder="bad_boy" required></div>
+    <div><label>Название</label><input name="name" placeholder="Bad Boy" required></div>
+  </div>
+  <button type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</div>
+<div class="card">
+  <h2>Список клубов</h2>
+  <table>
+    <tr><th>Название</th><th>ID</th><th>Действия</th></tr>
+    {% for club_id, club in clubs.items() %}
+    <tr>
+      <td><strong>{{club.name}}</strong></td>
+      <td><span class="badge badge-gray">{{club_id}}</span></td>
+      <td style="display:flex;gap:6px;">
+        <a href="/clubs/{{club_id}}/staff" class="btn btn-sm">Сотрудники</a>
+        <a href="/clubs/{{club_id}}/shift/new" class="btn btn-primary btn-sm">Новая смена</a>
+        <form method="POST" action="/clubs/{{club_id}}/delete" style="display:inline;">
+          <button class="btn btn-danger btn-sm" onclick="return confirm('Удалить клуб?')">Удалить</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Выбери клуб</h1>
+  <a href="/clubs" class="btn btn-primary">+ Добавить клуб</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+{% for club_id, club in clubs.items() %}
+<div class="card" style="cursor:pointer;">
+  <div style="font-size:24px;margin-bottom:8px;">🎵</div>
+  <div style="font-size:18px;font-weight:600;margin-bottom:4px;">{{club.name}}</div>
+  <div style="font-size:13px;color:#666;margin-bottom:16px;">Ночной клуб</div>
+  <div style="display:flex;gap:8px;">
+    <a href="/clubs/{{club_id}}/staff" class="btn btn-sm">Сотрудники</a>
+    <a href="/clubs/{{club_id}}/shift/new" class="btn btn-primary btn-sm">Новая смена</a>
+  </div>
+</div>
+{% else %}
+<div class="card"><p style="color:#666;">Нет клубов. <a href="/clubs">Добавь первый!</a></p></div>
+{% endfor %}
+</div>
+{% endblock %}

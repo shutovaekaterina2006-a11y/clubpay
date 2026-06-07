@@ -1,0 +1,122 @@
+{
+  "Т003": {
+    "name": "Маевич Лика",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т087": {
+    "name": "Горбунева Кармен",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т111": {
+    "name": "Кондакова Ариэль",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т164": {
+    "name": "Константинова Сидни",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т182": {
+    "name": "Куприянович Холли",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т209": {
+    "name": "Медякова Скарлет",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т211": {
+    "name": "Шестопалова Рейчел",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т218": {
+    "name": "Кужугет Бьянка",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "Т245": {
+    "name": "Лабеко Каролина",
+    "role": "Т",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ004": {
+    "name": "Померанцева Юля",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ007": {
+    "name": "Прохорова Кристина",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "КМ009": {
+    "name": "Вайтер Жанна",
+    "role": "КМ",
+    "guarantee": 0,
+    "active": true
+  },
+  "Х008": {
+    "name": "Таболина Лиза",
+    "role": "Х",
+    "guarantee": 0,
+    "active": true
+  },
+  "О006": {
+    "name": "Фролова Дарья",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "О018": {
+    "name": "Пимонова Лилия",
+    "role": "О",
+    "guarantee": 0,
+    "active": true
+  },
+  "Г003": {
+    "name": "Беспалова Фокси",
+    "role": "Г",
+    "guarantee": 0,
+    "active": true
+  },
+  "Д010": {
+    "name": "Зайцев Леша",
+    "role": "Д",
+    "guarantee": 0,
+    "active": true
+  },
+  "К004": {
+    "name": "Адамян Григорий",
+    "role": "К",
+    "guarantee": 0,
+    "active": true
+  },
+  "КАС006": {
+    "name": "Шутова Екатерина",
+    "role": "КАС",
+    "guarantee": 0,
+    "active": true
+  },
+  "АДМ002": {
+    "name": "Гречишкина Светлана",
+    "role": "АДМ",
+    "guarantee": 0,
+    "active": true
+  }
+}
