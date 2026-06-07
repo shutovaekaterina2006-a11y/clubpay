@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>{{club.name}} — Сотрудники</h1>
+  <a href="/" class="btn">На главную</a>
+</div>
+<div class="card">
+  <h2>Добавить сотрудника</h2>
+  <form method="POST" action="/clubs/{{club_id}}/staff/add">
+  <div class="form-row">
+    <div><label>Номер</label><input name="number" placeholder="Т285" required></div>
+    <div><label>Имя</label><input name="name" placeholder="Иванова Мария" required></div>
+    <div><label>Должность</label>
+      <select name="role">
+        {% for role in role_order %}
+        <option value="{{role}}">{{role_names[role]}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div><label>Индив. гарант (0 = стандартный)</label><input name="guarantee" type="number" value="0" min="0"></div>
+  </div>
+  <button type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</div>
+{% for role in role_order %}
+{% set emps = [] %}
+{% for num, emp in staff.items() %}{% if emp.role == role %}{% set _ = emps.append((num, emp)) %}{% endif %}{% endfor %}
+{% if emps %}
+<div class="card">
+  <h2>{{role_names[role]}} ({{emps|length}})</h2>
+  <table>
+    <tr><th>Номер</th><th>Имя</th><th>Гарант</th><th>Статус</th><th>Действия</th></tr>
+    {% for num, emp in emps %}
+    <tr>
+      <td><strong>{{num}}</strong></td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.guarantee if emp.guarantee else "станд."}}</td>
+      <td>
+        {% if emp.get("active", True) %}
+        <span class="badge badge-green">Активен</span>
+        {% else %}
+        <span class="badge badge-gray">Уволен</span>
+        {% endif %}
+      </td>
+      <td style="display:flex;gap:6px;">
+        <form method="POST" action="/clubs/{{club_id}}/staff/{{num}}/toggle" style="display:inline;">
+          <button class="btn btn-sm">{% if emp.get("active", True) %}Уволить{% else %}Вернуть{% endif %}</button>
+        </form>
+        <form method="POST" action="/clubs/{{club_id}}/staff/{{num}}/delete" style="display:inline;">
+          <button class="btn btn-danger btn-sm" onclick="return confirm('Удалить сотрудника?')">Удалить</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}
